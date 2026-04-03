@@ -1,0 +1,41 @@
+#include <Servo.h>
+
+const int maxThrottle = 1850;
+const int minThrottle = 1000;
+const int escPin = 8;
+const int switchPin = 2;
+
+Servo ESC; //Create Servo Object for ESC
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(switchPin, INPUT_PULLUP); //Interal pull-up resistor??
+  ESC.attach(escPin);
+  ESC.write(minThrottle);
+  delay(2000);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  bool switchState = digitalRead(switchPin);
+  if (switchState == HIGH) {
+    delay(5000);
+    runMotor(maxThrottle);
+  } else {
+    stopMotor();
+  }
+}
+
+void runMotor(int speed){
+  while (digitialRead(switchPin) == HIGH) {
+    ESC.write(speed);
+    delay(100);
+  }
+}
+
+void stopMotor() {
+  for(int i=0; i< 50; i++){
+    ESC.write(minThrottle);
+    delay(20);
+  }
+}
