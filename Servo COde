@@ -1,41 +1,23 @@
 #include <Servo.h>
 
-const int maxThrottle = 1850;
-const int minThrottle = 1000;
-const int escPin = 8;
-const int switchPin = 2;
-
-Servo ESC; //Create Servo Object for ESC
+Servo testServo;
 
 void setup() {
-  // put your setup code here, to run once:
-  pinMode(switchPin, INPUT_PULLUP); //Interal pull-up resistor??
-  ESC.attach(escPin);
-  ESC.write(minThrottle);
-  delay(2000);
+  testServo.attach(9); 
+  testServo.write(0);
+  delay(50);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  bool switchState = digitalRead(switchPin);
-  if (switchState == HIGH) {
-    delay(5000);
-    runMotor(maxThrottle);
-  } else {
-    stopMotor();
+  // Sweep from 68 to 112 degrees (a 44-degree range centered at 90)
+  for (int pos = 90 - 22; pos <= 90 + 22; pos += 1) {
+    testServo.write(pos);
+    delay(15);
   }
-}
 
-void runMotor(int speed){
-  while (digitialRead(switchPin) == HIGH) {
-    ESC.write(speed);
-    delay(100);
-  }
-}
-
-void stopMotor() {
-  for(int i=0; i< 50; i++){
-    ESC.write(minThrottle);
-    delay(20);
+  // Sweep back from 112 to 68 degrees
+  for (int pos = 90 + 22; pos >= 90 - 22; pos -= 1) {
+    testServo.write(pos);
+    delay(15);
   }
 }
