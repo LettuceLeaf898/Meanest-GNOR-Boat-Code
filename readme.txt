@@ -38,6 +38,9 @@ ESC:
     -connect orange to Positive side of Breakout board
     -connect Brown to Negative side of Breakout board
 
+MOTOR:
+    -plug the three cords into any of the blue in ESC
+
 BATTERY: ***LAST THING TO PLUG ***
     ***READ CHUG FIRST
     -ESC Red to Red and Black to Black
