@@ -4,10 +4,14 @@ WARNINGS:
 -DO NOT RUN ESC WITHOUT MOTOR
 -BATTERY SHOULD BE THE LAST THING YOU PLUG IN
 -IF ANYTHING IS SMOKING UNPLUG THE BATTERY
+
 -MOTOR IS VERY VERY FAST MAKE SURE IT'S MOUNTED
     KEEP FINGER AWAY FROM MOTOR WHILE ON
-    IT GOES 24000 ROTATIONS PER MINUTE DO NOT TOUCH IT CAN CUT
+    IT GOES 24000 ROTATIONS PER MINUTE 
+    DO NOT TOUCH IT CAN CUT
+
 -Hold red button to pause any action
+-TO FULLY STOP UNPLUG BATTERY
 
 ________________________________________________________
 PLUG: 
@@ -34,21 +38,20 @@ ESC:
     -connect orange to Positive side of Breakout board
     -connect Brown to Negative side of Breakout board
 
-BATTERY: ***LAST THING TO PLUG
+BATTERY: ***LAST THING TO PLUG ***
+    ***READ CHUG FIRST
     -ESC Red to Red and Black to Black
 
 ________________________________________________________
+
 CHUG:
 -Put ServoCOde into Arduino IDE
 -Make sure port says ARDUINO UNO
 -Press Checkmark to verify
 -READ WARNINGS AGAIN PLZ
 -Press Arrowkey to send the code to the Arduino.
-    -should run automatically
--UNPLUG BATTERY
+-PLUG IN BATTERY
+-should run automatically after that
+-unplug battery when done
 
-
-
-
-
-
+*Motor will not spin if battery isn't plugged in 
