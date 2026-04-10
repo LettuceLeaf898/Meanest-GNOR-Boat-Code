@@ -23,15 +23,15 @@ PLUG:
     (□	□)
 
 Breakout board:
-    -connect arduino GND to first box negative side
-    -connect arduino 5V to first box positive side
+    -connect arduino GND to first box negative side (black)
+    -connect arduino 5V to first box positive side (red)
 
 ARDUINO:
     -connect D9 to servo's white
     -connect D10 to ESC Yellow
 
 SERVO:
-    -connect Servo's Red to positive side of breakout board
+    -connect Servo's Red to positive side of breakout board (orange)
     -connect Servo's Black to negative side of breakout board
 
 ESC:
@@ -43,7 +43,7 @@ MOTOR:
 
 BATTERY: ***LAST THING TO PLUG ***
     ***READ CHUG FIRST
-    -ESC Red to Red and Black to Black
+    -ESC Yellow to Yellow to Battery
 
 ________________________________________________________
 
