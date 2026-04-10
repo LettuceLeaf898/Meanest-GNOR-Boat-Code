@@ -6,6 +6,7 @@ void setup() {
   rudderServo.attach(9); 
   rudderServo.write(0);
   delay(50);
+  
 }
 
 void loop() {
