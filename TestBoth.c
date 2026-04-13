@@ -20,22 +20,27 @@ void setup() {
 }
 
 void loop() {
-    int x = 68; //Starting position for rudder servo
-    rudderServo.write(x); //change x to change the position of the rudder servo
-    delay(15); //delay for the servo to reach the position
-    x = 112; //Ending position for rudder servo
-    rudderServo.write(x);
+  // Sweep from 68 to 112 degrees (a 44-degree range centered at 90)
+  for (int pos = 90 - 22; pos <= 90 + 22; pos += 1) {
+    rudderServo.write(pos);
     delay(15);
-  
+  }
+  // Sweep back from 112 to 68 degrees
+  for (int pos = 90 + 22; pos >= 90 - 22; pos -= 1) {
+    rudderServo.write(pos);
+    delay(15);
+  }
+ //delay(5000);
+   // --- STEP 2: TEST SPIN ---
   // We stay between 1000 (Off) and 1200 (Very Low Power)
   for (int speed = 1000; speed <= 1100; speed += 5) {
     myESC.writeMicroseconds(speed);
     delay(100);
   }
 
-  delay(2000); // change 2000 to change how long the ESC runs at speed
+  delay(2000); // Run at low speed for 2 seconds
 
   // --- STEP 3: STOP ---
-  myESC.writeMicroseconds(1000); // change 1000 to change the speed at which the ESC stops (1000 is off)
-  return;
+  myESC.writeMicroseconds(1000);
+  delay(5000); // Wait 5 seconds before repeating
 }
