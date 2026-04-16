@@ -5,21 +5,21 @@ Servo motor;
 // Important Variables
 
 // Adjust this to adjust start-up delay
-#define Startup_Delay 5000 // Adjust time it takes for boat to start moving
+#define Startup_Delay 10000 // Adjust time it takes for boat to start moving
 #define Calibration_Delay 2000 // Adjust time it takes for calibration
 
 // Adjust these to adjust rudder movement
-#define Rudder_Straight 90   
-#define Rudder_45_Degree_Left_Turn 60  // Needs to be adjusted based on actual turning movement
+#define Rudder_Straight 60   
+#define Rudder_45_Degree_Left_Turn 0  // Needs to be adjusted based on actual turning movement
 
 // Adjust these to adjust timing
-#define Motor_On 1100 // Can be increased for faster boat, but also will eat up battery more
+#define Motor_On 1200 // Can be increased for faster boat, but also will eat up battery more
 #define Motor_Off 1000 // Can be used to stop ESC
-#define First_Boat_Lap_Segment_Time_Straight 10000 // Can adjust these values along with motor_on to mess with timing of lap segments
-#define Second_Boat_Lap_Segment_Time_Turn 5000
-#define Third_Boat_Lap_Segment_Time_Straight 3000
+#define First_Boat_Lap_Segment_Time_Straight 45000 // Can adjust these values along with motor_on to mess with timing of lap segments
+#define Second_Boat_Lap_Segment_Time_Turn 15000
+#define Third_Boat_Lap_Segment_Time_Straight 15000
 #define Fourth_Boat_Lap_Segment_Time_Turn 5000
-#define Last_Boat_Lap_Segment_Time_Straight 10000
+#define Last_Boat_Lap_Segment_Time_Straight 45000
 
 // Defining Boat_Lap_Segment states (for switch case)
 enum Boat_Lap_Segment_States {
