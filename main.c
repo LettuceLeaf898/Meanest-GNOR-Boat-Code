@@ -16,9 +16,9 @@ Servo motor;
 #define Motor_On 1200 // Can be increased for faster boat, but also will eat up battery more
 #define Motor_Off 1000 // Can be used to stop ESC
 #define First_Boat_Lap_Segment_Time_Straight 45000 // Can adjust these values along with motor_on to mess with timing of lap segments
-#define Second_Boat_Lap_Segment_Time_Turn 15000
+#define Second_Boat_Lap_Segment_Time_Turn 20000
 #define Third_Boat_Lap_Segment_Time_Straight 15000
-#define Fourth_Boat_Lap_Segment_Time_Turn 5000
+#define Fourth_Boat_Lap_Segment_Time_Turn 15000
 #define Last_Boat_Lap_Segment_Time_Straight 45000
 
 // Defining Boat_Lap_Segment states (for switch case)
